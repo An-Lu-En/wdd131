@@ -1,0 +1,105 @@
+:root {
+    --main-font: 'Maven Pro', sans-serif;
+    --head-font: 'Bona Nova SC', serif;
+    --primary-color: #354259;
+    --secondary-color: #4a5670;
+    --background-color: #f8f9fa;
+    --text-color: #333333;
+}
+
+body {
+  font-family: var(--main-font);
+  margin: 0;
+  line-height: 1.6;
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-family: var(--main-font);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  background: #2a3447;
+  margin-top: 1rem;
+}
+
+.nav.show {
+    display: flex;
+  }
+
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem;
+}
+
+.nav a:hover {
+  background: var(--secondary-color);
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+main h2 {
+  font-family: var(--head-font);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  border: 1px solid #ccc;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: white;
+  margin-top: 2rem;
+}
