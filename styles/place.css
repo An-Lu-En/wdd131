@@ -1,0 +1,146 @@
+:root {
+  --main-font: 'Maven Pro', sans-serif;
+  --head-font: 'Bona Nova SC', serif;
+  --primary-color: #008753;   /* Green (Nigeria flag) */
+  --secondary-color: #ffffff; /* White */
+  --background-color: #f6fff8;
+  --text-color: #222;
+  --card-bg: #ffffff;
+  --border-radius: 8px;
+  --max-width: 1000px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  font-family: var(--head-font);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  display: block;
+  position: relative;
+  height: auto;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  /* max-width: var(--max-width);
+  margin: auto; */
+  padding: 1rem; 
+}
+
+section {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: var(--border-radius);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.weather-icon-mobile {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.weather-icon-mobile img{
+  width: 60px;
+  height: auto;
+}
+
+.weather-icon-desktop::after {
+  content: " ⛅";
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.data, .weather {
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+footer {
+  background-color: var(--primary-color);
+  font-family: var(--head-font);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Media Query for Desktop */
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+
+  
+  .content-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .data h2, .weather h2 {
+    background-color: var(--primary-color);
+    font-family: var(--head-font);
+    color: var(--secondary-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .data, .weather {
+    position: absolute;
+    width: 300px;
+    margin: 0;
+  }
+
+  .data {
+    top: 25rem;
+    left: 3rem;
+  }
+
+  .weather {
+    top: 45rem;
+    right: 3rem;
+  }
+  
+  .hero {
+    grid-column: span 2;
+    position: relative;
+  }
+
+  .weather-icon-mobile {
+    display: none;
+  }
+
+  .weather h2 .weather-icon-desktop {
+    display: inline-block;
+  }
+}

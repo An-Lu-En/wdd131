@@ -1,10 +1,10 @@
 /* Larger screen styles */
 @media (min-width: 700px) {
-  .hamburger {
+  #menu {
     display: none;
   }
 
-  .nav {
+  .navigation {
     display: flex;
     flex-direction: row;
     gap: 1rem;

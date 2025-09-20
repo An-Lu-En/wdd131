@@ -41,25 +41,33 @@ header h1 {
   cursor: pointer;
 }
 
-.nav {
+#menu::before {
+	content: "≡";
+}
+
+
+.navigation {
   display: none;
   flex-direction: column;
   background: #2a3447;
   margin-top: 1rem;
 }
 
-.nav.show {
+/* .nav.show {
     display: flex;
-  }
+  } */
 
+#menu.show::before {
+	content: "X";
+}
 
-.nav a {
+.navigation a {
   color: white;
   text-decoration: none;
   padding: 0.75rem;
 }
 
-.nav a:hover {
+.navigation a:hover {
   background: var(--secondary-color);
 }
 
